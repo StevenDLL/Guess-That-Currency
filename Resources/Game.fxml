@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="600.0" style="-fx-background-color: #5a5366;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuessThatCurrency.Controllers.GameController">
+    <ImageView fx:id="coinToGuess_ImageView" fitHeight="256.0" fitWidth="256.0" layoutX="172.0" layoutY="230.0" onMouseClicked="#coinToGuess_Clicked" pickOnBounds="true" preserveRatio="true">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/reveal.png" />
+    </ImageView>
+    <ImageView fx:id="leftArrow_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="14.0" layoutY="822.0" onMouseClicked="#leftArrow_Clicked" pickOnBounds="true" preserveRatio="true" visible="false">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/left-chevron_FILLED.png" />
+    </ImageView>
+    <ImageView fx:id="rightArrow_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="522.0" layoutY="822.0" onMouseClicked="#rightArrow_Clicked" pickOnBounds="true" preserveRatio="true" visible="false">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/right-chevron_FILLED.png" />
+    </ImageView>
+    <ImageView fx:id="hint_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="350.0" layoutY="822.0" onMouseClicked="#hint_Clicked" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.rightAnchor="186.0">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/life-insurance.png" />
+    </ImageView>
+    <TextField fx:id="guess_TextField" alignment="CENTER" layoutX="150.0" layoutY="510.0" prefHeight="40.0" prefWidth="300.0" promptText="Type Guess Here" style="-fx-background-color: #91867f;" visible="false">
+        <font>
+            <Font name="System Italic" size="18.0" />
+        </font>
+    </TextField>
+    <Group fx:id="lives_group" layoutX="198.0" layoutY="14.0">
+        <ImageView fx:id="heart1_ImageView" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <Image url="@Images/Others/heart.png" />
+        </ImageView>
+        <ImageView fx:id="heart2_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <Image url="@Images/Others/heart.png" />
+        </ImageView>
+        <ImageView fx:id="heart3_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <Image url="@Images/Others/heart.png" />
+        </ImageView>
+    </Group>
+    <ImageView fx:id="settings_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#settings_Clicked" pickOnBounds="true" preserveRatio="true">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/settings.png" />
+    </ImageView>
+    <ImageView fx:id="submit_ImageView" fitHeight="32.0" fitWidth="32.0" layoutX="456.0" layoutY="514.0" onMouseClicked="#submit_Clicked" pickOnBounds="true" preserveRatio="true" visible="false">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/enter.png" />
+    </ImageView>
+    <Label fx:id="currentCoin_Label" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="275.0" layoutY="828.0" prefHeight="36.0" prefWidth="50.0" text="0" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="36.0" />
+        </font>
+    </Label>
+    <Label fx:id="clickToReveal_Label" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="183.0" layoutY="332.0" text="Click To Reveal" textAlignment="CENTER" textFill="WHITE" underline="true">
+        <font>
+            <Font name="System Italic" size="36.0" />
+        </font>
+    </Label>
+    <ImageView fx:id="color_ImageView" fitHeight="64.0" fitWidth="64.0" layoutX="186.0" layoutY="822.0" onMouseClicked="#color_Clicked" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="186.0">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+        <Image url="@Images/Others/color-palette.png" />
+    </ImageView>
+    <TextField fx:id="hintOne_TextField" alignment="CENTER" editable="false" focusTraversable="false" layoutX="50.0" layoutY="610.0" prefHeight="60.0" prefWidth="500.0" promptText="HINT ONE HIDDEN" style="-fx-background-color: #a7cec6;" visible="false">
+        <font>
+            <Font name="System Italic" size="18.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </TextField>
+    <TextField fx:id="hintTwo_TextField" alignment="CENTER" editable="false" focusTraversable="false" layoutX="50.0" layoutY="680.0" prefHeight="60.0" prefWidth="500.0" promptText="HINT TWO HIDDEN" style="-fx-background-color: #a7cec6;" visible="false">
+        <font>
+            <Font name="System Italic" size="18.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </TextField>
+</AnchorPane>

@@ -1,0 +1,30 @@
+Guess That Currency:
+- Simple game where the player has 3 "lives" to try to guess where a coin/bill is from.
+- Player can request TWO hint per coin/bill.
+- Player can skip coin/bill, but will lose one life.
+
+Menu:
+- Color: #8b917f
+- Sleek and easy to understand.
+- User clicks the coin icon to start the game.
+- User clicks the books icon to see a library of coins which the user can select any from and learn more about them.
+- User clicks the "?" icon to see a quick tutorial on how to play the game.
+
+Game:
+- Color: #8b917f
+- Color: #91867f
+- Hint icon at top center of screen.
+- Coin/Bill in center of screen.
+- Text field below coin/bill to input answer
+- An arrow pointing to the left side of the screen.
+- An arrow pointing to the right side of the screen.
+- Either arrow can be pressed to go between coins, if right arrow is pressed display menu confirming they want to skip.
+- 3 hearts top right of screen, each one is considered a players life.
+
+
+Coin:
+- Code -> "USD, EUR, ..."
+- Symbol -> "$, €, ..."
+- Name -> "United States Dollar, Euro, ..."
+- Value -> "0.25c, 1, ..."
+- Image Location -> ...
